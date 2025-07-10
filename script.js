@@ -38,7 +38,7 @@ document.getElementById('GetData01').addEventListener('click', async function ()
     }
 
     const data = await response.json();
-    // console.table(data);
+    console.table(data);
 });
 
 
