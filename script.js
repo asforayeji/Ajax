@@ -30,7 +30,7 @@
 
 
 document.getElementById('GetData01').addEventListener('click', async function () {
-    const apiendPoint = 'https://jsonplaceholder.typicode.com/posts/16/invalid';
+    const apiendPoint = 'https://jsonplaceholder.typicode.com/posts/16';
     const response = await fetch (apiendPoint);
     if(!response.ok){
         console.log('Error');
@@ -60,13 +60,13 @@ document.getElementById('GetData01').addEventListener('click', async function ()
 
 document.getElementById('axiox-get').addEventListener('click', async function () {
     console.log('Axios Get Request');
-    const apiendPoint = 'https://jsonplaceholder.typicode.com/posts/16/invalid';
+    const apiendPoint = 'https://jsonplaceholder.typicode.com/posts/17';
     try{
         const response = await axios.get(apiendPoint);
         console.table(response.data);
     }catch(error){
         // console.table(error);
-        console.log(error);
+        console.log(error.message);
     }
 
 });
