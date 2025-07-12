@@ -115,6 +115,7 @@ document.getElementById('axiox-post').addEventListener('click', async function (
 document.getElementById('axiox-country').addEventListener('click', async function(){
     const api = 'https://restcountries.com/v3.1/name/bangladesh?fields=name,capital,population,currencies';
     const response = await axios.get(api);
-    const data = response.data;
-    console.log(data);
+    const data = response.data[0];
+    const output = `The Capital of Bangladesh is ${data.capital[0]}, population ${data.population}, and the currency is ${data.currencies.BDT.name}`;
+    console.log(output);
 });
