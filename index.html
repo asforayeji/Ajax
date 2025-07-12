@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajax Test</title>
 </head>
+
 <body>
     <div class="buttons">
         <button id="GetData01" class="common-btn">Get data</button>
         <button id="axiox-get" class="common-btn">AXIOS Get</button>
-        <button id="GetData03" class="common-btn">Get data3</button>
-        <button id="GetData04" class="common-btn">Get data4</button>
-        <button id="GetData05" class="common-btn">Get data4</button>
+        <button id="fetch-post" class="common-btn">fetch-post</button>
+        <button id="axiox-post" class="common-btn">axiox-post</button>
     </div>
-
+    <div class="buttons-2">
+        <button id="fetch-country" class="common-btn">Fetch Country</button>
+        <button id="axiox-get" class="common-btn">AXIOS Get</button>
+        <button id="fetch-post" class="common-btn">fetch-post</button>
+        <button id="axiox-post" class="common-btn">axiox-post</button>
+    </div>
+    
     <!-- Include Axios from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
 
 
 <style>
-    .buttons{
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        gap: 20px;
+    }
+
+    .buttons {
         display: flex;
         flex-direction: row;
         gap: 10px;
@@ -30,11 +47,22 @@
         justify-content: center;
     }
 
-    .common-btn{
+    .common-btn {
         padding: 10px 20px;
         background-color: rgb(10, 110, 224);
         color: white;
         font-size: 18px;
         cursor: pointer;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    .buttons-2 {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
     }
 </style>

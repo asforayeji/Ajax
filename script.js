@@ -67,8 +67,52 @@ document.getElementById('axiox-get').addEventListener('click', async function ()
     }catch(error){
         // console.table(error);
         console.log(error.message);
+    } 
+});
+
+
+document.getElementById('fetch-post').addEventListener('click', async function () {
+    const apiendPoint = 'http://ajax.test/backend.php';
+    const data = {
+        'username' : 'admin@example.com',
+        'password' : 'password123'
     }
+
+    const response = await fetch(apiendPoint, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers:{
+            'content-type': 'application/json'
+        }
+    });
+
+
+    const output = await response.json()
+    console.table(output);
+});
+
+
+
+
+
+
+document.getElementById('axiox-post').addEventListener('click', async function () {
+    const apiendPoint = 'http://ajax.test/backend.php';
+    const data = {
+        'username' : 'admin@example.com',
+        'password' : 'password123'
+    } //payload
+    const response = await axios.post(apiendPoint, data, {
+        'content-type': 'application/json'
+    })
+    const result = response.data;
+    console.table(result);
 
 });
 
 
+
+
+document.getElementById('fetch-country').addEventListener('click', function(){
+    const api = 'https://restcountries.com/v3.1/name/bangladesh?fields=name,capital,population,currencies';
+});
