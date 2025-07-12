@@ -107,12 +107,14 @@ document.getElementById('axiox-post').addEventListener('click', async function (
     })
     const result = response.data;
     console.table(result);
-
 });
 
 
 
 
-document.getElementById('fetch-country').addEventListener('click', function(){
+document.getElementById('axiox-country').addEventListener('click', async function(){
     const api = 'https://restcountries.com/v3.1/name/bangladesh?fields=name,capital,population,currencies';
+    const response = await axios.get(api);
+    const data = response.data;
+    console.log(data);
 });
