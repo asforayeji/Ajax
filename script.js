@@ -119,3 +119,8 @@ document.getElementById('axiox-country').addEventListener('click', async functio
     const output = `The Capital of Bangladesh is ${data.capital[0]}, population ${data.population}, and the currency is ${data.currencies.BDT.name}`;
     console.log(output);
 });
+
+
+document.getElementById('fetch-form-post').addEventListener('click', async function(){
+    
+});
