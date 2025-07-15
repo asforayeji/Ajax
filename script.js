@@ -112,7 +112,7 @@ document.getElementById('axiox-post').addEventListener('click', async function (
 
 
 
-document.getElementById('axiox-country').addEventListener('click', async function(){
+document.getElementById('fetch-country').addEventListener('click', async function(){
     const api = 'https://restcountries.com/v3.1/name/bangladesh?fields=name,capital,population,currencies';
     const response = await axios.get(api);
     const data = response.data[0];
@@ -134,5 +134,5 @@ document.getElementById('fetch-form-post').addEventListener('click', async funct
     })
 
     const output = await response.json();
-    console.log(output);
+    console.table(output);
 });
