@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajax Test</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <button id="fetch-country" class="common-btn">Fetch Country</button>
         <button id="fetch-form-post" class="common-btn">Form POST</button>
         <button id="axiox-country" class="common-btn">AXIOS Get countey</button>
-        <button id="axiox-form-post" class="common-btn">axiox-form-post</button>
+        <button id="axios-form-post" class="common-btn">axiox-form-post</button>
     </div>
 
 
@@ -27,6 +28,29 @@
         <input type="email" id="email" placeholder="Email" required>
         <button type="submit">Submit</button>
     </form>
+
+    <section>
+        <h2>AJAX With PHP Backend</h2>
+        <div class="inputs">
+            <input type="text" id="Name" placeholder="Name" required>
+            <input type="email" id="Email" placeholder="Email" required>
+            <button id="Save-New">Save New</button>
+            <button id="Update">Update</button>
+        </div>
+        <div class="record-checker">
+            <button id="Check-Record">Check Record</button>
+            <input type="text" id="record-id" placeholder="Get Record by ID">            
+            <input type="text" id="record-id" placeholder="ID">            
+        </div>
+        <div class="btns">
+            <button id="use-fetch">Use Fetch</button>
+            <button id="use-axios">Use Axios</button>
+        </div>
+    </section>
+
+
+
+
 
 
     <!-- Include Axios from CDN -->
@@ -37,40 +61,3 @@
 </html>
 
 
-<style>
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        gap: 20px;
-    }
-
-    .buttons {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .common-btn {
-        padding: 10px 20px;
-        background-color: rgb(10, 110, 224);
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-    }
-
-    .buttons {
-        display: flex;
-        justify-content: space-between;
-        gap: 50px;
-    }
-    .buttons-2 {
-        display: flex;
-        justify-content: space-between;
-        gap: 50px;
-    }
-</style>

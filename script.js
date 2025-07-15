@@ -121,6 +121,7 @@ document.getElementById('fetch-country').addEventListener('click', async functio
 });
 
 
+
 document.getElementById('fetch-form-post').addEventListener('click', async function(){
     // const form = new FormData(document.getElementById('record-form'));
     const apiendPoint = 'http://ajax.test/form.php';
@@ -146,11 +147,8 @@ document.getElementById('axios-form-post').addEventListener('click', async funct
     form.append('username', 'admin@example.com');
     form.append('password', 'admin123');
 
-    const response = await fetch(apiendPoint, {
-        method: 'POST',
-        body: form
-    })
+    const response = await axios.post(apiendPoint, form);
 
-    const output = await response.json();
+    const output = response.data
     console.table(output);
 });
