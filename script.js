@@ -122,5 +122,17 @@ document.getElementById('axiox-country').addEventListener('click', async functio
 
 
 document.getElementById('fetch-form-post').addEventListener('click', async function(){
-    
+    // const form = new FormData(document.getElementById('record-form'));
+    const apiendPoint = 'http://ajax.test/form.php';
+    const form = new FormData();
+    form.append('username', 'admin@example.com');
+    form.append('password', 'admin123');
+
+    const response = await fetch(apiendPoint, {
+        method: 'POST',
+        body: form
+    })
+
+    const output = await response.json();
+    console.log(output);
 });
