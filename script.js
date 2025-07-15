@@ -139,7 +139,7 @@ document.getElementById('fetch-form-post').addEventListener('click', async funct
 
 
 
-document.getElementById('fetch-form-post').addEventListener('click', async function(){
+document.getElementById('axios-form-post').addEventListener('click', async function(){
     // const form = new FormData(document.getElementById('record-form'));
     const apiendPoint = 'http://ajax.test/form.php';
     const form = new FormData();
