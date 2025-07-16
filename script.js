@@ -204,9 +204,9 @@ document.getElementById('Update').addEventListener('click', async function (e) {
 
 document.getElementById('delete').addEventListener('click', async function (e) {
     const confirmation = confirm('Are you sure you want to delete this record?');
-    if(!confirmation) {
+    if (!confirmation) {
         return;
-    }   
+    }
     const id = document.getElementById('record-id').value;
     const apiendPoint = `http://localhost:3000/persons/${id}`;
     await axios.delete(apiendPoint);
@@ -215,4 +215,15 @@ document.getElementById('delete').addEventListener('click', async function (e) {
     const resultDiv = `php-api-result`
     const response = await axios.get(apiendPointNew);
     document.getElementById(resultDiv).innerHTML = `<pre>${JSON.stringify(response.data, null, 2)}</pre>`;
+});
+
+
+
+
+document.getElementById('xkcd').addEventListener('click', async function () {
+    const apiendPoint = 'http://ajax.test/proxy.php';
+    const response = await axios.get(apiendPoint);
+    const image = response.data.img;
+    console.log(image);
+
 });
