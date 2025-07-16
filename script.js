@@ -31,8 +31,8 @@
 
 document.getElementById('GetData01').addEventListener('click', async function () {
     const apiendPoint = 'https://jsonplaceholder.typicode.com/posts/16';
-    const response = await fetch (apiendPoint);
-    if(!response.ok){
+    const response = await fetch(apiendPoint);
+    if (!response.ok) {
         console.log('Error');
         return;
     }
@@ -61,27 +61,27 @@ document.getElementById('GetData01').addEventListener('click', async function ()
 document.getElementById('axiox-get').addEventListener('click', async function () {
     console.log('Axios Get Request');
     const apiendPoint = 'https://jsonplaceholder.typicode.com/posts/17';
-    try{
+    try {
         const response = await axios.get(apiendPoint);
         console.table(response.data);
-    }catch(error){
+    } catch (error) {
         // console.table(error);
         console.log(error.message);
-    } 
+    }
 });
 
 
 document.getElementById('fetch-post').addEventListener('click', async function () {
     const apiendPoint = 'http://ajax.test/backend.php';
     const data = {
-        'username' : 'admin@example.com',
-        'password' : 'password123'
+        'username': 'admin@example.com',
+        'password': 'password123'
     }
 
     const response = await fetch(apiendPoint, {
         method: 'POST',
         body: JSON.stringify(data),
-        headers:{
+        headers: {
             'content-type': 'application/json'
         }
     });
@@ -99,8 +99,8 @@ document.getElementById('fetch-post').addEventListener('click', async function (
 document.getElementById('axiox-post').addEventListener('click', async function () {
     const apiendPoint = 'http://ajax.test/backend.php';
     const data = {
-        'username' : 'admin@example.com',
-        'password' : 'password123'
+        'username': 'admin@example.com',
+        'password': 'password123'
     } //payload
     const response = await axios.post(apiendPoint, data, {
         'content-type': 'application/json'
@@ -112,7 +112,7 @@ document.getElementById('axiox-post').addEventListener('click', async function (
 
 
 
-document.getElementById('fetch-country').addEventListener('click', async function(){
+document.getElementById('fetch-country').addEventListener('click', async function () {
     const api = 'https://restcountries.com/v3.1/name/bangladesh?fields=name,capital,population,currencies';
     const response = await axios.get(api);
     const data = response.data[0];
@@ -122,7 +122,7 @@ document.getElementById('fetch-country').addEventListener('click', async functio
 
 
 
-document.getElementById('fetch-form-post').addEventListener('click', async function(){
+document.getElementById('fetch-form-post').addEventListener('click', async function () {
     // const form = new FormData(document.getElementById('record-form'));
     const apiendPoint = 'http://ajax.test/form.php';
     const form = new FormData();
@@ -140,7 +140,7 @@ document.getElementById('fetch-form-post').addEventListener('click', async funct
 
 
 
-document.getElementById('axios-form-post').addEventListener('click', async function(){
+document.getElementById('axios-form-post').addEventListener('click', async function () {
     // const form = new FormData(document.getElementById('record-form'));
     const apiendPoint = 'http://ajax.test/form.php';
     const form = new FormData();
@@ -151,4 +151,68 @@ document.getElementById('axios-form-post').addEventListener('click', async funct
 
     const output = response.data
     console.table(output);
+});
+
+
+document.getElementById('show-all').addEventListener('click', async function () {
+    const apiendPoint = 'http://localhost:3000/persons'
+    const resultDiv = 'php-api-result'
+    const response = await axios.get(apiendPoint);
+    document.getElementById(resultDiv).innerHTML = `<pre>${JSON.stringify(response.data, null, 2)}</pre>`;
+});
+
+
+
+document.getElementById('get-record').addEventListener('click', async function () {
+    const id = document.getElementById('record-id').value;
+    const apiendPoint = `http://localhost:3000/persons/${id}`;
+    const resultDiv = 'php-api-result'
+    const response = await axios.get(apiendPoint);
+    document.getElementById(resultDiv).innerHTML = `<pre>${JSON.stringify(response.data, null, 2)}</pre>`;
+});
+
+
+
+
+document.getElementById('record-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const apiendPoint = 'http://localhost:3000/persons'
+    const name = document.getElementById('Name').value;
+    const email = document.getElementById('Email').value;
+    await axios.post(apiendPoint, { name, email });
+
+    const resultDiv = `php-api-result`
+    const response = await axios.get(apiendPoint);
+    document.getElementById(resultDiv).innerHTML = `<pre>${JSON.stringify(response.data, null, 2)}</pre>`;
+});
+
+
+
+
+document.getElementById('Update').addEventListener('click', async function (e) {
+    const id = document.getElementById('record-id').value;
+    const apiendPoint = `http://localhost:3000/persons/${id}`;
+    const name = document.getElementById('Name').value;
+    const email = document.getElementById('Email').value;
+    await axios.put(apiendPoint, { name, email });
+
+    const resultDiv = `php-api-result`
+    const response = await axios.get(apiendPoint);
+    document.getElementById(resultDiv).innerHTML = `<pre>${JSON.stringify(response.data, null, 2)}</pre>`;
+});
+
+
+document.getElementById('delete').addEventListener('click', async function (e) {
+    const confirmation = confirm('Are you sure you want to delete this record?');
+    if(!confirmation) {
+        return;
+    }   
+    const id = document.getElementById('record-id').value;
+    const apiendPoint = `http://localhost:3000/persons/${id}`;
+    await axios.delete(apiendPoint);
+
+    const apiendPointNew = `http://localhost:3000/persons`;
+    const resultDiv = `php-api-result`
+    const response = await axios.get(apiendPointNew);
+    document.getElementById(resultDiv).innerHTML = `<pre>${JSON.stringify(response.data, null, 2)}</pre>`;
 });

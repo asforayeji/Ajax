@@ -23,28 +23,36 @@
     </div>
 
 
-    <form id="record-form">
+    <form id="Record-form">
         <input type="text" id="name" placeholder="Name" required>
         <input type="email" id="email" placeholder="Email" required>
         <button type="submit">Submit</button>
     </form>
 
     <section>
-        <h2>AJAX With PHP Backend</h2>
-        <div class="inputs">
-            <input type="text" id="Name" placeholder="Name" required>
-            <input type="email" id="Email" placeholder="Email" required>
-            <button id="Save-New">Save New</button>
-            <button id="Update">Update</button>
-        </div>
-        <div class="record-checker">
-            <button id="Check-Record">Check Record</button>
-            <input type="text" id="record-id" placeholder="Get Record by ID">            
-            <input type="text" id="record-id" placeholder="ID">            
-        </div>
-        <div class="btns">
-            <button id="use-fetch">Use Fetch</button>
-            <button id="use-axios">Use Axios</button>
+        <div class="section-inner">
+            <h2>AJAX With PHP Backend</h2>
+            <form class="inputs" id="record-form">
+                <input name="name" type="text" id="Name" placeholder="Name" required>
+                <input name="Email" type="email" id="Email" placeholder="Email" required>
+                <button type="submit" id="Save-New" onclick="">Save New</button>
+                <button type="button" id="Update" onclick="">Update</button>
+                <button type="button" id="delete" onclick="">Delete</button>
+            </form>
+
+            <div class="record-checker">
+                <button type="submit" id="show-all">Show All Record</button>
+                <button class="btn me2" id="get-record">Get Record By ID</button>         
+                <input type="text" id="record-id" placeholder="ID" required>            
+            </div>
+            <div class="btns">
+                <button type="submit" id="fetch-crud">Use Fetch</button>
+                <button type="submit" id="axios-crud">Use Axios</button>
+            </div>
+            <!-- a output input for use-fetch/axios -->
+           <div id="php-api-result">
+            <pre> // Result will apear here</pre>
+           </div>
         </div>
     </section>
 

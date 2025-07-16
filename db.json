@@ -1,38 +1,43 @@
 {
-    "posts": [
-        {
-            "id": "1",
-            "title": "a title",
-            "views": 100
-        },
-        {
-            "id": "2",
-            "title": "another title",
-            "views": 200
-        }
-    ],
-    "comments": [
-        {
-            "id": "1",
-            "text": "a comment about post 1",
-            "postId": "1"
-        },
-        {
-            "id": "2",
-            "text": "another comment about post 1",
-            "postId": "1"
-        }
-    ],
-    "persons" :[
-        {
-            "id": "1", 
-            "name": "John Doe",
-            "age": 30
-        },
-        {
-            "id": "2",
-            "name": "Jane Smith",
-            "age": 25
-        }
-    ]
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "persons": [
+    {
+      "id": "2f3d",
+      "name": "rahim",
+      "email": "rahim@gmail.com"
+    },
+    {
+      "id": "9307",
+      "name": "karim",
+      "email": "karim@gmail.com"
+    },
+    {
+      "id": "8989",
+      "name": "fahim",
+      "email": "fahim2024@gmail.com"
+    }
+  ]
 }

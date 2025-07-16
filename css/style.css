@@ -5,6 +5,7 @@ body {
     justify-content: center;
     height: 100vh;
     gap: 20px;
+    background:rebeccapurple;
 }
 
 .buttons {
@@ -28,8 +29,61 @@ body {
     justify-content: space-between;
     gap: 50px;
 }
+
 .buttons-2 {
     display: flex;
     justify-content: space-between;
     gap: 50px;
+}
+
+section {
+    max-width: 1080px;
+    width: 100%;
+    background: rgba(229, 218, 218, 0.2);
+    backdrop-filter:blur(20px);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+
+input {
+    padding: 10px 50px;
+}
+div {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+}
+
+form { 
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 5px;
+}
+.section-inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding:20px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+#php-api-result {
+    width: 100%;
+    background: #cd93f133;
+    padding: 0px 10px;
+    border-radius: 5px;
 }
