@@ -9,30 +9,34 @@
 </head>
 
 <body>
-    <div class="buttons">
-        <button id="GetData01" class="common-btn">Get data</button>
-        <button id="axiox-get" class="common-btn">AXIOS Get</button>
-        <button id="fetch-post" class="common-btn">fetch-post</button>
-        <button id="axiox-post" class="common-btn">axiox-post</button>
-    </div>
-    <div class="buttons-2">
-        <button id="fetch-country" class="common-btn">Fetch Country</button>
-        <button id="fetch-form-post" class="common-btn">Form POST</button>
-        <button id="axiox-country" class="common-btn">AXIOS Get countey</button>
-        <button id="axios-form-post" class="common-btn">axiox-form-post</button>
-        <button id="xkcd" class="common-btn">XKCD</button>
-    </div>
-
-
-    <form id="Record-form">
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <button type="submit">Submit</button>
-    </form>
-
     <section>
         <div class="section-inner">
-            <h2>AJAX With PHP Backend</h2>
+            <h2>1.AJAX with public APIs (JSONPlaceholder & Postman Echo)</h2>
+            <div class="buttons">
+                <button id="GetData01" class="common-btn">Get data</button>
+                <button id="axiox-get" class="common-btn">AXIOS Get</button>
+                <button id="fetch-post" class="common-btn">fetch-post</button>
+                <button id="axiox-post" class="common-btn">axiox-post</button>
+            </div>
+            <div class="buttons-2">
+                <button id="fetch-country" class="common-btn">Fetch Country</button>
+                <button id="fetch-form-post" class="common-btn">Form POST</button>
+                <button id="axiox-country" class="common-btn">AXIOS Get countey</button>
+                <button id="axios-form-post" class="common-btn">axiox-form-post</button>
+                <button id="xkcd" class="common-btn">XKCD</button>
+            </div>
+
+
+            <form id="Record-form">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="section-inner">
+            <h2 calss="common-heading">2. AJAX With PHP Backend</h2>
             <form class="inputs" id="record-form">
                 <input name="name" type="text" id="Name" placeholder="Name" required>
                 <input name="Email" type="email" id="Email" placeholder="Email" required>
@@ -43,17 +47,17 @@
 
             <div class="record-checker">
                 <button type="submit" id="show-all">Show All Record</button>
-                <button class="btn me2" id="get-record">Get Record By ID</button>         
-                <input type="text" id="record-id" placeholder="ID" required>            
+                <button class="btn me2" id="get-record">Get Record By ID</button>
+                <input type="text" id="record-id" placeholder="ID" required>
             </div>
             <div class="btns">
                 <button type="submit" id="fetch-crud">Use Fetch</button>
                 <button type="submit" id="axios-crud">Use Axios</button>
             </div>
             <!-- a output input for use-fetch/axios -->
-           <div id="php-api-result">
-            <pre> // Result will apear here</pre>
-           </div>
+            <div id="php-api-result">
+                <pre> // Result will apear here</pre>
+            </div>
         </div>
     </section>
 
@@ -68,5 +72,3 @@
 </body>
 
 </html>
-
-

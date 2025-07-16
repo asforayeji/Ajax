@@ -27,13 +27,11 @@ body {
 .buttons {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
 }
 
 .buttons-2 {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
 }
 
 section {
@@ -51,6 +49,7 @@ section {
 
 h2 {
     font-size: 50px;
+    margin: 0;
 }
 
 
@@ -75,6 +74,7 @@ form {
     justify-content: center;
     align-items: start;
     padding:20px;
+    width: 80%;
 }
 
 button {

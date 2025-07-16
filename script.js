@@ -50,6 +50,7 @@ document.getElementById('GetData01').addEventListener('click', async function ()
 //     // const data = response.data;
 //     console.table(response.data);
 // });
+calss="common-heading"
 
 
 
